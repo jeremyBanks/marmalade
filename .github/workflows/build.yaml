@@ -23,6 +23,7 @@ jobs:
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
       - run: |
+          rustup target add wasm32-unknown-unknown
           cargo install trunk
           cargo install tauri-cli
       - name: install dependencies (ubuntu only)
