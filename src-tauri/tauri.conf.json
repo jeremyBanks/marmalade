@@ -8,14 +8,10 @@
   },
   "package": {
     "productName": "marmalade",
-    "version": "0.0.0"
+    "version": "0.1.0"
   },
   "tauri": {
-    "allowlist": {
-      "all": true
-    },
     "bundle": {
-      "active": true,
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -24,7 +20,7 @@
         "icons/icon.ico"
       ],
       "identifier": "marmalade.jeremy.ca",
-      "targets": "all"
+      "targets": ["appimage"]
     },
     "security": {
       "csp": null
@@ -34,12 +30,12 @@
     },
     "windows": [
       {
+        "title": "Marmalade",
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
         "fullscreen": true,
         "resizable": true,
-        "title": "Marmalade",
-        "width": 800,
-        "height": 600
+        "width": 1280,
+        "height": 800
       }
     ]
   }
