@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, ubuntu-20.04, windows-latest]
+        platform: [ubuntu-20.04] #, macos-latest, windows-latest]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -23,8 +23,8 @@ jobs:
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
       - run: |
-        cargo install trunk
-        cargo install tauri-cli
+          cargo install trunk
+          cargo install tauri-cli
       - name: install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-20.04'
         run: |
